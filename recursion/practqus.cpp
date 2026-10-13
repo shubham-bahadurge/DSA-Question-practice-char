@@ -25,6 +25,16 @@ void srt (int n){
         }
        return srt1( arr,n,i+1);
      }
+     int srt3 (int arr[],int key,int n, int i){
+        if(arr[i]==key){
+            return i;
+        }
+        if (i ==n){
+            cout << "element not found";
+            return 0;
+        }
+        return srt3(arr,key, n,i+ 1);
+     }
 
 int main (){
 srt(10);
@@ -35,4 +45,6 @@ cout<<endl;
 cout<<srt1(arr,5,0);
 cout<<endl;
 cout<<srt1(arr2,5,0);
+cout<<endl;
+cout<<srt3(arr,5,5,0);
 }
